@@ -16,6 +16,12 @@ console.log(ask);
 if (ask.userguessedNumber === randomNumber) {
     console.log(chalk.bold.italic.green("Congratulations! you guessed a right number."));
 }
+else if (ask.userguessedNumber < 3) {
+    console.log("your guess is to down");
+}
+else if (ask.userguessedNumber > 6) {
+    console.log("your guess is very up");
+}
 else {
     console.log(chalk.bold.italic.green("Oops! Wrong number,Try Again."));
 }
